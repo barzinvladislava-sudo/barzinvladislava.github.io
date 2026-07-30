@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vladislava Barzin — Senior UI/UX &amp; Visual Designer</title>
+<meta name="description" content="Vladislava Barzin — Senior UI/UX and Visual Designer with nearly 10 years designing conversion-focused digital experiences for global brands and SaaS platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#141414;
+    --muted:#6b6b6b;
+    --line:#ececec;
+    --accent:#ff5924;
+    --max:940px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  a{color:inherit}
+
+  /* Header / Nav */
+  header.site{
+    position:sticky;top:0;z-index:10;
+    background:rgba(250,249,246,.85);
+    backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .navbar{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em}
+  nav a{
+    text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;
+    margin-left:26px;transition:color .2s;
+  }
+  nav a:hover{color:var(--ink)}
+  .nav-links{display:flex}
+  @media(max-width:640px){.nav-links{display:none}}
+
+  /* Hero */
+  .hero{padding:88px 0 64px;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:22px;
+  }
+  h1{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:700;
+    font-size:clamp(40px,7vw,68px);line-height:1.02;letter-spacing:-.03em;
+    margin-bottom:20px;
+  }
+  .role{font-size:clamp(19px,2.6vw,23px);color:var(--muted);font-weight:400;margin-bottom:30px}
+  .summary{max-width:660px;font-size:18px;color:#3a3833;margin-bottom:34px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:14.5px;color:var(--muted)}
+  .meta a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px;transition:border-color .2s,color .2s}
+  .meta a:hover{color:var(--ink);border-color:var(--accent)}
+  .meta span.sep{color:var(--line)}
+
+  /* Sections */
+  section{padding:70px 0;border-bottom:1px solid var(--line)}
+  .sec-label{
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:38px;
+  }
+  h2.visually-hidden{position:absolute;left:-9999px}
+
+  /* Experience */
+  .job{display:grid;grid-template-columns:180px 1fr;gap:30px;padding:30px 0;border-top:1px solid var(--line)}
+  .job:first-of-type{border-top:none;padding-top:0}
+  .job-when{font-size:14px;color:var(--muted)}
+  .job-when .co{display:block;color:var(--ink);font-weight:600;margin-bottom:4px;font-size:15px}
+  .job-title{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:700;margin-bottom:6px;letter-spacing:-.02em}
+  .job-loc{font-size:14px;color:var(--muted);margin-bottom:14px}
+  .job-blurb{color:#3a3833;margin-bottom:16px;max-width:640px}
+  ul.pts{list-style:none;display:flex;flex-direction:column;gap:9px;max-width:640px}
+  ul.pts li{position:relative;padding-left:22px;font-size:15.5px;color:#3a3833;line-height:1.55}
+  ul.pts li::before{content:"";position:absolute;left:2px;top:10px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .brands{font-style:italic}
+  @media(max-width:640px){
+    .job{grid-template-columns:1fr;gap:12px}
+    .hero{padding:60px 0 48px}
+    section{padding:52px 0}
+  }
+
+  /* Skills */
+  .chips{display:flex;flex-wrap:wrap;gap:9px;max-width:760px}
+  .chip{
+    font-size:14px;color:#3a3833;background:#fff;
+    border:1px solid var(--line);border-radius:100px;padding:7px 15px;
+    transition:border-color .2s,transform .2s;
+  }
+  .chip:hover{border-color:var(--accent);transform:translateY(-1px)}
+
+  /* Two-col grid for education/langs/certs */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:52px}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr;gap:40px}}
+  .block-h{font-family:'Bricolage Grotesque',sans-serif;font-size:19px;font-weight:700;margin-bottom:20px;letter-spacing:-.02em}
+  .edu-item{padding:16px 0;border-top:1px solid var(--line)}
+  .edu-item:first-child{border-top:none;padding-top:0}
+  .edu-deg{font-weight:600;font-size:15.5px;margin-bottom:3px}
+  .edu-school{font-size:14.5px;color:var(--muted)}
+  .edu-yr{font-size:13.5px;color:var(--muted);margin-top:2px}
+  .lang-row{display:flex;justify-content:space-between;padding:11px 0;border-top:1px solid var(--line);font-size:15px}
+  .lang-row:first-of-type{border-top:none}
+  .lang-row .lvl{color:var(--muted);font-size:14px}
+  .cert{font-size:15.5px;color:#3a3833;padding:11px 0;border-top:1px solid var(--line)}
+  .cert:first-of-type{border-top:none}
+
+  /* Contact / footer */
+  .contact-cta{padding:78px 0}
+  .contact-cta h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(30px,5vw,46px);letter-spacing:-.03em;margin-bottom:18px}
+  .contact-cta p{color:var(--muted);max-width:520px;margin-bottom:28px;font-size:18px}
+  .btn{
+    display:inline-block;text-decoration:none;background:var(--accent);color:#fff;
+    padding:14px 26px;border-radius:100px;font-size:15px;font-weight:600;transition:opacity .2s,transform .2s;
+  }
+  .btn:hover{opacity:.9;transform:translateY(-1px)}
+  .btn-2{background:transparent;color:var(--ink);border:1px solid var(--ink);margin-left:12px}
+  footer.site{border-top:1px solid var(--line);padding:34px 0;font-size:14px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer.site a{text-decoration:none;color:var(--muted);transition:color .2s}
+  footer.site a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap navbar">
+    <span class="brand">Vladislava Barzin</span>
+    <nav class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="https://portfolio.barzinvladislava.com/" target="_blank" rel="noopener">Portfolio ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Senior UI/UX &amp; Visual Designer</p>
+      <h1>Designing digital<br>experiences that convert.</h1>
+      <p class="role">Senior Visual and UI/UX Designer creating scalable experiences for SaaS, DTC, and modern brands.</p>
+      <p class="summary">Specialized in landing page design, design systems, and brand identity — with a track record that includes a <strong>198% conversion increase</strong> for an enterprise client and <strong>60+ scalable landing page templates</strong> used across industries. Skilled at partnering with CRO managers, developers, and clients to balance business goals, usability, and visual quality.</p>
+      <div class="meta">
+        <span>Timișoara, Romania</span><span class="sep">·</span>
+        <a href="tel:+40720223646">+40 720 223 646</a><span class="sep">·</span>
+        <a href="mailto:barzin.vladislava@gmail.com">barzin.vladislava@gmail.com</a><span class="sep">·</span>
+        <a href="https://www.linkedin.com/in/vladislavabarzin/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span>
+        <a href="https://portfolio.barzinvladislava.com/" target="_blank" rel="noopener">Portfolio</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <p class="sec-label">Experience</p>
+      <h2 class="visually-hidden">Professional Experience</h2>
+
+      <div class="job">
+        <div class="job-when"><span class="co">Instapage (airSlate)</span>Sep 2023 — Jun 2026<br>Remote</div>
+        <div>
+          <h3 class="job-title">Senior UI/UX Designer</h3>
+          <p class="job-blurb">Moved into a broader UI/UX role following the acquisition of Instapage by airSlate, working directly with enterprise clients on landing page strategy, UX reviews, and hands-on design.</p>
+          <ul class="pts">
+            <li>Designed 60+ fully conceptualized landing page templates, from brand identity through final UI, now used at scale across industries.</li>
+            <li>Built the visual foundation for a modular block library, establishing reusable design guidelines adopted across client work.</li>
+            <li>Conducted UX and conversion-focused reviews that directly improved engagement and performance outcomes.</li>
+            <li>Partnered with CRO managers, developers, and client teams in calls and account reviews, contributing product feedback that shaped the builder.</li>
+            <li>Surfaced and documented product bugs, improving builder reliability.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-when"><span class="co">Instapage</span>May 2020 — Sep 2023<br>Remote</div>
+        <div>
+          <h3 class="job-title">Senior Visual Designer</h3>
+          <p class="job-blurb">Designed conversion-focused landing page experiences for enterprise clients across the full marketing funnel, from awareness campaigns to post-click personalization.</p>
+          <ul class="pts">
+            <li>Delivered landing page experiences for global brands including <span class="brands">Skillshare, Discovery+, Codecademy, SoundCloud, Calm, Cozy Earth, and Molekule</span>.</li>
+            <li>Designed personalized, geo-targeted ad-to-page experiences for Atlantic Relocation Systems: 24 unique landing pages that drove a <strong>198% increase in conversions</strong> and cut cost per acquisition by 55% — featured as an official Instapage customer story.</li>
+            <li>Contributed to a refreshed brand aesthetic and conversion-focused design approach credited by the client with dramatically improving advertising efficiency.</li>
+            <li>Balanced business goals, usability, and visual quality across multiple funnel stages.</li>
+            <li>Collaborated cross-functionally with CRO managers, copywriters, client partners, and developers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-when"><span class="co">Instapage</span>May 2019 — May 2020<br>Remote</div>
+        <div>
+          <h3 class="job-title">Visual Designer</h3>
+          <p class="job-blurb">First role at Instapage, building the template foundations of conversion-centered design.</p>
+          <ul class="pts">
+            <li>Developed scalable landing page template systems enabling customers to prototype post-click experiences efficiently.</li>
+            <li>Collaborated across teams to improve usability, consistency, and engagement.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-when"><span class="co">Newpharma</span>Jan 2018 — May 2019<br>Remote</div>
+        <div>
+          <h3 class="job-title">Graphic Designer</h3>
+          <p class="job-blurb">Designed digital campaign assets for one of the largest online pharmacies in Belgium.</p>
+          <ul class="pts">
+            <li>Created campaign visuals, newsletters, and banners for <span class="brands">L’Oréal, Vichy, La Roche-Posay, Nuxe, and Clarins</span>.</li>
+            <li>Partnered with marketing teams to maintain brand consistency across channels.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-when"><span class="co">Continental</span>Apr 2015 — Sep 2017<br>Timișoara, Romania</div>
+        <div>
+          <h3 class="job-title">In-House Graphic Designer</h3>
+          <p class="job-blurb">Delivered print and digital assets, illustrations, and internal brand communications across departments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <p class="sec-label">Skills</p>
+      <h2 class="visually-hidden">Skills</h2>
+      <div class="chips">
+        <span class="chip">UI/UX Design</span>
+        <span class="chip">Product Design</span>
+        <span class="chip">Visual Design</span>
+        <span class="chip">Landing Page Design</span>
+        <span class="chip">Conversion-Centered Design</span>
+        <span class="chip">Design Systems</span>
+        <span class="chip">Brand Identity</span>
+        <span class="chip">Illustration</span>
+        <span class="chip">User Experience (UX)</span>
+        <span class="chip">User Interface Design</span>
+        <span class="chip">Wireframing</span>
+        <span class="chip">Prototyping</span>
+        <span class="chip">Information Architecture</span>
+        <span class="chip">Accessibility</span>
+        <span class="chip">Enterprise UX</span>
+        <span class="chip">AI-Powered Design Workflows</span>
+        <span class="chip">AI-Assisted Content Creation</span>
+        <span class="chip">Human-Centred AI</span>
+        <span class="chip">Agile Workflows</span>
+        <span class="chip">Cross-Functional Collaboration</span>
+        <span class="chip">Figma</span>
+        <span class="chip">Adobe Creative Suite</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION / LANGUAGES / CERTS -->
+  <section id="education">
+    <div class="wrap">
+      <p class="sec-label">Education &amp; More</p>
+      <div class="grid2">
+        <div>
+          <h3 class="block-h">Education</h3>
+          <div class="edu-item">
+            <div class="edu-deg">Master’s Degree, Graphics</div>
+            <div class="edu-school">West University of Timișoara</div>
+            <div class="edu-yr">2013 — 2015</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-deg">Erasmus+ Scholarship, Graphics</div>
+            <div class="edu-school">University of Zagreb</div>
+            <div class="edu-yr">Oct 2014 — Mar 2015</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-deg">Bachelor’s Degree, Graphic Design</div>
+            <div class="edu-school">West University of Timișoara</div>
+            <div class="edu-yr">2010 — 2013</div>
+          </div>
+        </div>
+        <div>
+          <h3 class="block-h">Languages</h3>
+          <div class="lang-row"><span>Romanian</span><span class="lvl">Native</span></div>
+          <div class="lang-row"><span>English</span><span class="lvl">Full Professional</span></div>
+          <div class="lang-row"><span>Serbian</span><span class="lvl">Intermediate</span></div>
+          <div class="lang-row"><span>Spanish</span><span class="lvl">Elementary</span></div>
+
+          <h3 class="block-h" style="margin-top:44px">Certifications</h3>
+          <div class="cert">Landing Page Optimization</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;width:100%">
+    <span>© <span id="yr"></span> Vladislava Barzin</span>
+    <span>Timișoara, Romania · Senior UI/UX &amp; Visual Designer</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
